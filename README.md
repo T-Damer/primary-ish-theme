@@ -29,12 +29,10 @@ code --install-extension primary-ish-vscode-0.1.0.vsix
 
 ## Publishing
 
-Before publishing, change the `publisher` field in `package.json` if your Marketplace publisher ID is not `dpancov64`.
-
 ```bash
-npm install -g @vscode/vsce
-vsce login <publisher-id>
-vsce publish
+npm install
+npx @vscode/vsce login GreatGesture
+npm run publish:marketplace
 ```
 
 For Open VSX:
