@@ -1,8 +1,8 @@
 {
   "name": "primary-ish-vscode",
   "displayName": "Primary-ish Warm",
-  "description": "A warm, paper-like VS Code color theme with optional soft 3D/custom CSS effects, inspired by Primary for Obsidian without copying its implementation.",
-  "version": "0.1.2",
+  "description": "A warm, paper-like VS Code color theme inspired by Primary for Obsidian — cream and parchment surfaces with soft accents.",
+  "version": "0.1.3",
   "publisher": "GreatGesture",
   "license": "MIT",
   "author": {
@@ -39,8 +39,7 @@
   "scripts": {
     "package": "vsce package",
     "publish:marketplace": "vsce publish",
-    "publish:open-vsx": "ovsx publish",
-    "enable-vscode-css": "node scripts/enable-vscode-custom-css.mjs"
+    "publish:open-vsx": "ovsx publish"
   },
   "devDependencies": {
     "@vscode/vsce": "latest",

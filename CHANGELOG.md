@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3
+
+- Add Marketplace screenshots for light and dark themes.
+- Document theme-only install; mark custom CSS as unsupported and not recommended.
+- Remove workbench patch helper script.
+
 ## 0.1.2
 
 - Fix CI: read `VSCE_PAT` from the GitHub `main` environment.
