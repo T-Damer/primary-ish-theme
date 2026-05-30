@@ -1,0 +1,65 @@
+{
+  "name": "primary-ish-vscode",
+  "displayName": "Primary-ish Warm",
+  "description": "A warm, paper-like VS Code color theme with optional soft 3D/custom CSS effects, inspired by Primary for Obsidian without copying its implementation.",
+  "version": "0.1.0",
+  "publisher": "dpancov64",
+  "license": "MIT",
+  "author": {
+    "name": "Daniil Pancov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpancov64/primary-ish-vscode.git"
+  },
+  "homepage": "https://github.com/dpancov64/primary-ish-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/dpancov64/primary-ish-vscode/issues"
+  },
+  "icon": "images/icon.png",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "keywords": [
+    "theme",
+    "warm",
+    "paper",
+    "primary",
+    "obsidian",
+    "3d",
+    "glassmorphism"
+  ],
+  "galleryBanner": {
+    "color": "#E8D8BD",
+    "theme": "light"
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish:marketplace": "vsce publish",
+    "publish:open-vsx": "ovsx publish"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "latest",
+    "ovsx": "latest"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Primary-ish Warm Light",
+        "uiTheme": "vs",
+        "path": "./themes/primary-ish-light-color-theme.json"
+      },
+      {
+        "label": "Primary-ish Warm Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/primary-ish-dark-color-theme.json"
+      }
+    ]
+  },
+  "extensionKind": [
+    "ui"
+  ]
+}
