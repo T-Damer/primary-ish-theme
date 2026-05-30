@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Fix CI: read `VSCE_PAT` from the GitHub `main` environment.
+
 ## 0.1.1
 
 - Publish under Marketplace publisher `GreatGesture`.

@@ -10,6 +10,7 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: main
     steps:
       - uses: actions/checkout@v4
         with:
@@ -48,7 +49,7 @@ jobs:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
           if [ -z "$VSCE_PAT" ]; then
-            echo "::error::VSCE_PAT is missing. Add it under Settings → Secrets and variables → Actions (repository secret, exact name VSCE_PAT)."
+            echo "::error::VSCE_PAT is missing. Add it as a secret on the 'main' environment or as a repository Actions secret."
             exit 1
           fi
 

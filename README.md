@@ -34,9 +34,9 @@ code --install-extension primary-ish-vscode-0.1.0.vsix
 Pushes to `main` publish to the [VS Marketplace](https://marketplace.visualstudio.com/) when **`version` in `package.json` changes**.
 
 1. Create a [Personal Access Token](https://dev.azure.com/_usersSettings/tokens) with **Marketplace → Manage**.
-2. In GitHub: **Settings → Secrets and variables → Actions → New repository secret**
-   - Name: `VSCE_PAT`
-   - Value: your token
+2. In GitHub, add secret **`VSCE_PAT`** (your PAT) either as:
+   - **Environments → `main` → Environment secrets** (what this repo uses), or
+   - **Secrets and variables → Actions → Repository secrets**
 3. Bump `version` in `package.json`, commit, and push to `main`.
 
 The workflow is [`.github/workflows/publish.yml`](.github/workflows/publish.yml). Pushes that do not change `version` skip publishing (Marketplace rejects duplicate versions).
