@@ -42,8 +42,16 @@ jobs:
         if: steps.version.outputs.changed == 'true'
         run: npm ci
 
-      - name: Publish extension
+      - name: Verify VSCE_PAT secret
         if: steps.version.outputs.changed == 'true'
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
-        run: npx @vscode/vsce publish
+        run: |
+          if [ -z "$VSCE_PAT" ]; then
+            echo "::error::VSCE_PAT is missing. Add it under Settings → Secrets and variables → Actions (repository secret, exact name VSCE_PAT)."
+            exit 1
+          fi
+
+      - name: Publish extension
+        if: steps.version.outputs.changed == 'true'
+        run: npx @vscode/vsce publish -p "${{ secrets.VSCE_PAT }}"
