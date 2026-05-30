@@ -1,30 +1,38 @@
 /* Optional layer for APC / Custom CSS and JS Loader.
-   This is intentionally original CSS, not copied from Primary for Obsidian.
-   It gives VS Code a soft, paper-card, slightly-dimensional interface. */
+   Intentionally original CSS — not copied from Primary for Obsidian. */
 
 .monaco-workbench {
   --primaryish-radius: 13px;
   --primaryish-shadow: 0 18px 42px rgba(40, 31, 20, 0.18);
   --primaryish-soft-border: rgba(160, 132, 91, 0.18);
+  --primaryish-gap: #d4c4a8;
+  background-color: var(--primaryish-gap) !important;
 }
 
 .monaco-workbench .part.sidebar,
 .monaco-workbench .part.panel,
 .monaco-workbench .part.auxiliarybar {
-  margin: 8px;
+  margin: 8px !important;
   border-radius: var(--primaryish-radius) !important;
-  overflow: hidden;
-  box-shadow: var(--primaryish-shadow);
+  overflow: hidden !important;
+  box-shadow: var(--primaryish-shadow) !important;
   border: 1px solid var(--primaryish-soft-border) !important;
   backdrop-filter: blur(18px) saturate(1.05);
 }
 
+.monaco-workbench .part.sidebar .composite,
+.monaco-workbench .part.panel .composite,
+.monaco-workbench .part.auxiliarybar .composite {
+  border-radius: inherit !important;
+  overflow: hidden !important;
+}
+
 .monaco-workbench .part.editor > .content .editor-group-container {
-  margin: 8px 8px 10px 0;
+  margin: 8px 8px 10px 0 !important;
   border-radius: 16px !important;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(25, 20, 15, 0.16);
-  border: 1px solid var(--primaryish-soft-border);
+  overflow: hidden !important;
+  box-shadow: 0 20px 50px rgba(25, 20, 15, 0.16) !important;
+  border: 1px solid var(--primaryish-soft-border) !important;
 }
 
 .monaco-workbench .tabs-container .tab {

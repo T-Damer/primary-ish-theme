@@ -4,6 +4,8 @@ A warm, paper-like VS Code theme with optional soft 3D/custom CSS effects.
 
 This project is inspired by the general design direction of [Primary for Obsidian](https://github.com/primary-theme/obsidian): warm paper surfaces, restrained contrast, soft functional colors, and a slightly nostalgic interface. It is **not** a direct port and does not copy Primary's CSS implementation.
 
+![alt text](<CleanShot 2026-05-30 at 20.33.30@2x.png>)
+
 ## Themes
 
 - **Primary-ish Warm Light** — cream paper background, warm sidebar surfaces, red/orange accents.
@@ -17,7 +19,30 @@ VS Code's normal theme API cannot add real layout effects such as transforms, bl
 custom-css/primary-ish-effects.css
 ```
 
-You can use it with tools such as APC or Custom CSS and JS Loader. This is intentionally optional because custom CSS selectors can break after VS Code updates.
+**VS Code 1.92+ / 1.122:** [Apc Customize UI++](https://marketplace.visualstudio.com/items?itemName=drcika.apc-extension) no longer patches current VS Code builds. Use **[Custom CSS and JS Loader](https://marketplace.visualstudio.com/items?itemName=be5invis.vscode-custom-css)** instead.
+
+### One-time setup (VS Code)
+
+1. Install `be5invis.vscode-custom-css`.
+2. Add to user `settings.json`:
+
+```json
+"vscode_custom_css.imports": [
+  "file://${userHome}/.vscode/extensions/greatgesture.primary-ish-vscode-0.1.2/custom-css/primary-ish-effects.css"
+],
+"workbench.colorTheme": "Primary-ish Warm Light"
+```
+
+3. Quit VS Code (`Cmd+Q`), then in Terminal:
+
+```bash
+cd /path/to/primary-ish-theme
+node scripts/enable-vscode-custom-css.mjs
+```
+
+4. Reopen VS Code. After each VS Code **app** update, re-run the script (or use Command Palette → **Reload Custom CSS and JS**).
+
+This is intentionally optional because custom CSS selectors can break after VS Code updates.
 
 ## Local development
 

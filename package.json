@@ -39,7 +39,8 @@
   "scripts": {
     "package": "vsce package",
     "publish:marketplace": "vsce publish",
-    "publish:open-vsx": "ovsx publish"
+    "publish:open-vsx": "ovsx publish",
+    "enable-vscode-css": "node scripts/enable-vscode-custom-css.mjs"
   },
   "devDependencies": {
     "@vscode/vsce": "latest",
