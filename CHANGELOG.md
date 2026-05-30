@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.1
+
+- Publish under Marketplace publisher `GreatGesture`.
+- Add automated publish workflow on version bumps.
+
 ## 0.1.0
 
 - Initial release.
